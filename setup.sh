@@ -723,7 +723,7 @@ echo -e "$red" "[ X ] Mingw-w64 -> not found "
 #Powerstager requires mingw64 to work , mingw32 is required because powerfull.sh requires it for 32bit fud exe compiling
 # In case mingw64 not found then remove any previously mingw32 & 64 bit faulty instalations and install mingw64 
 
-xterm -T "☣ INSTALL MINGW64 COMPILLER ☣" -geometry 100x30 -e "sudo apt-get install *mingw* -y | tee -a $mingw"
+xterm -T "☣ INSTALL MINGW64 COMPILLER ☣" -geometry 100x30 -e "sudo apt-get install mingw32 mingw-w64 -y | tee -a $mingw"
 which x86_64-w64-mingw32-gcc > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
 echo -e "$green" "[ ✔ ] Mingw-64 Compiler..................[ found ]"
@@ -748,7 +748,7 @@ echo -e "$red" "[ X ] Mingw-32 -> not found "
 #Powerstager requires mingw64 to work , mingw32 is required because powerfull.sh requires it for 32bit fud exe compiling
 # In case mingw64 not found then remove any previously mingw32 & 64 bit faulty instalations and install mingw64 
 
-xterm -T "☣ INSTALL MINGW32 COMPILLER ☣" -geometry 100x30 -e "sudo apt-get install *mingw* -y | tee -a $mingw"
+xterm -T "☣ INSTALL MINGW32 COMPILLER ☣" -geometry 100x30 -e "sudo apt-get install mingw32 mingw-w64 -y | tee -a $mingw"
 which i686-w64-mingw32-gcc > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
 echo -e "$green" "[ ✔ ] Mingw-32 Compiler..................[ found ]"
