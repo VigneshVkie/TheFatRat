@@ -163,7 +163,7 @@ echo -e "$green" "Press [ENTER] key to try again ."
 read -r cont
 bkf
 fi
-echo "python2 $bkdf" | tee -a "$config" "$log" > /dev/null 2>&1
+echo "python3 $bkdf" | tee -a "$config" "$log" > /dev/null 2>&1
 echo "Backdoor-factory -> OK" >> "$inst"
 ssplt
 ;;
@@ -175,7 +175,8 @@ which backdoor-factory > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
 echo -e "$green" "[ ✔ ] Backdoor-Factory -> OK"
 echo "backdoor-factory" | tee -a "$config" "$log" > /dev/null 2>&1
-echo "Backdoor-factory -> OK" >> "$inst"
+echo "Backdoor-factory -> OK" >> "$inst
+ssplt
 else
 echo -e "$red" "[ X ] backdoor-factory"
 echo "0" > "$stp"
